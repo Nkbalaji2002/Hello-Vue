@@ -1,21 +1,24 @@
 <script>
+import HelloWorld from "./components/HelloWorld.vue";
 export default {
-  data() {
-    return {
-      message: "Hello Vue World",
-    };
-  },
+  components: { HelloWorld },
 };
 </script>
 
 <!-- html -->
 <template>
-  <div class="p-4" id="app">
-    <div class="flex justify-center items-center ml-0 mr-0 mt-auto mb-auto">
-      <div class="rounded-xl p-10 bg-blue-500 text-white text-center text-2xl">
-        {{ message }}
-      </div>
-    </div>
+  <div id="app">
+    <HelloWorld />
   </div>
 </template>
 
+<style>
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+</style>
